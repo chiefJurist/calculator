@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css" type="text/css">
+        <!--Merging the script in the htm file-->
+        <script>
+            //MAKING THE BUTTONS FUNCTIONAL
+            function button(name) {
+                document.calculatorApp.displayPanel.value += name;
+            }
+            
+            //MAKING THE "=" SIGN FUNCTIONAL
+            function solution() {
+                var answer = document.calculatorApp.displayPanel.value;
+                document.calculatorApp.displayPanel.value =  eval(answer);
+            }
+
+            //MAKING THE "C" SIGN FUNCTIONAL
+            function calculate() {
+                document.calculatorApp.displayPanel.value = "";
+            }
+            
+            //MAKING THE BACKSPACE BUTTON FUNCTIONAL ("del")
+            function backSpace() {
+                var value = document.calculatorApp.displayPanel.value;
+                document.calculatorApp.displayPanel.value = value.substring(0, (value.length - 1));
+            }
+            
+            //MAKING A FUNCTION FOR SYNTAX ETRORS
+            onerror = function error() {
+                document.calculatorApp.displayPanel.value = "SYNTAX ERROR";
+            }
+        </script>
+    </head>
+    <body>
+        <!--Enclosing all in a form-->
+        <form action="" name="calculatorApp">
+            <!--Initializing the display-->
+            <div id="display">
+                <input type="text" class="display" name="displayPanel" placeholder="0">
+            </div>
+
+            <!--Initializing the first row of buttons-->
+            <div id="firstRow">
+                <input type="button" value="C" class="button red broad" onclick="calculate();">
+                <input type="button" value="del" class="button red" onclick="backSpace();">
+                <input type="button" value="/" class="button brown" onclick="button('/');">
+            </div>
+
+            <!--Initializing the second row of buttons-->
+            <div id="secondRow">
+                <input type="button" value="1" class="button" onclick="button(1);">
+                <input type="button" value="2" class="button" onclick="button(2);">
+                <input type="button" value="3" class="button" onclick="button(3);">
+                <input type="button" value="*" class="button brown" onclick="button('*');">
+            </div>
+
+            <!--Initializing the third row of buttons-->
+            <div id="thirdRow">
+                <input type="button" value="4" class="button" onclick="button(4);">
+                <input type="button" value="5" class="button" onclick="button(5);">
+                <input type="button" value="6" class="button" onclick="button(6);">
+                <input type="button" value="-" class="button brown" onclick="button('-');">
+            </div>
+
+            <!--Initializing the fourth row of buttons-->
+            <div id="fourthRow">
+                <input type="button" value="7" class="button" onclick="button(7);">
+                <input type="button" value="8" class="button" onclick="button(8);">
+                <input type="button" value="9" class="button" onclick="button(9);">
+                <input type="button" value="+" class="button brown" onclick="button('+');">
+            </div>
+
+            <!--Initializing the fifth row of buttons-->
+            <div id="fifthRow">
+                <input type="button" value="0" class="button brown" onclick="button(0);">
+                <input type="button" value="." class="button brown" onclick="button('.');">
+                <input type="button" value="=" class="button brown broad" onclick="solution();">
+            </div>
+        </form>
+    </body>
+</html>

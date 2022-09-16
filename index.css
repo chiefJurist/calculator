@@ -1,0 +1,91 @@
+/* MAKING THE WORK IN GENERAL APPEAR NEAT*/
+body,html{
+    margin: 0;
+    background-color: burlywood;
+    box-sizing: border-box;
+}
+
+
+/*STYLING THE FORM*/
+form{
+    width: 30%;
+    background-color: brown;
+    margin-left: 35%;
+    margin-top: 7%;
+    border-radius: 5%;
+    position: relative;
+}
+
+
+/*STYLING THE DISPLAY PANEL*/
+#display{
+    border: 0;
+}
+
+.display{
+    width: 90%;
+    margin-top: 10%;
+    margin-bottom: 12%;
+    margin-left: 4%;
+    font-size: xx-large;
+    padding-top: 10%;
+    text-align: end;
+    border: 0;
+    border-radius: 3%;
+    background-color: rgb(214, 213, 213);
+}
+
+
+/*STYLING THE BUTTONS*/
+.button{
+    font-size: x-large;
+    margin-left: 5%;
+    width: 18%;
+    margin-bottom: 5%;
+    border: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.button:hover{
+    background-color: rgb(192, 188, 188);
+}
+.button:active{
+    background-color: rgb(179, 165, 165);
+}
+
+/*Additional style for the red buttons*/
+.red{
+    background-color: red;
+}
+.red:hover{
+    background-color: rgb(255, 92, 92);
+}
+.red:active{
+    background-color: rgb(212, 28, 28);
+}
+
+/*Additional style for the brown buttons*/
+.brown{
+    background-color: chocolate;
+}
+.brown:hover{
+    background-color: coral;
+}
+.brown:active{
+    background-color: rgb(167, 97, 47);
+}
+
+/*Additional style for broad buttons*/
+.broad{
+    width: 41%;
+}
+
+
+/*FOR SMARTPHONES*/
+@media (max-width: 600px){
+    form{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 40%;
+    }
+}
